@@ -5,17 +5,18 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Podaj wysokość trójkąta:");
-        int wysokosc = scanner.nextInt();
+        int height = scanner.nextInt();
 
         System.out.println("Podaj znak, z którego ma być zbudowany trójkąt:");
         char symbol = scanner.next().charAt(0);
 
         generateRightTriangle(height, symbol);
+      scanner.close();
     }
 
     public static void generateRightTriangle(int height, char symbol) {
-        for (int i = 0; i < wysokosc; i++) {
-            for (int j = 0; j < wysokosc - i - 1; j++) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < height - i - 1; j++) {
                 System.out.print("  ");
             }
             for (int k = 0; k <= i; k++) {
